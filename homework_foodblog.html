@@ -82,6 +82,14 @@
             border-radius: 0.5em;
         }
 
+        .profileImg {
+            width: 40px;
+            height: 30px;
+            float: left;
+            margin-right: 15px;
+            display: block;
+        }
+
         footer {
             position: absolute;
             bottom: 0;
@@ -141,6 +149,7 @@
                     props: ['author', 'date', 'content'],
                     template: `
                     <div class="post">
+                        <img src="images/profile.png" alt="User Icon" class="profileImg">
                         <span class="author">{{ author }}</span> —
                         <span class="date">{{ date }}</span>
                         <span class="reply">REPLY</span>
