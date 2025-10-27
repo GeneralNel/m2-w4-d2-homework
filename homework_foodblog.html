@@ -40,6 +40,26 @@
             font-family: 'Sacramento', cursive;
         }
 
+        header .navbar {
+            padding: 0;
+            justify-content: center;
+        }
+
+        header .navbar-nav {
+            flex-direction: row;
+        }
+
+        header .nav-link {
+            color: rgb(60, 190, 160) !important;
+            font-size: 0.4em;
+            font-weight: bold;
+            padding: 0.5rem 1rem !important;
+        }
+
+        header .nav-link:hover {
+            color: rgb(216, 150, 7) !important;
+        }
+
         main h2 {
             color: rgb(60, 190, 160);
             text-transform: uppercase;
@@ -207,6 +227,29 @@
                 'food-image': {
                     props: ['src', 'alt'],
                     template: '<img v-bind:src="src" :alt="alt" class="img-fluid">'
+                },
+                'navigation': {
+                    template: `
+                        <nav class="navbar navbar-expand-lg navbar-light">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Recipes</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Lifestyles</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Videos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">About</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    `
                 },
             },
             data: {
