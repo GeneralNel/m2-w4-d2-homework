@@ -127,11 +127,12 @@
         <div id="container" class="container-fluid">
             <header>
                 <blog-title></blog-title>
+                <navigation></navigation>
             </header>
             <main class="container-fluid">
                 <div class="row">
                     <aside id="photos" class="col-md-3">
-                        <img src="images/chili.jpg" alt="White Chicken Chili" class="img-fluid">
+                        <food-image src="images/chili.jpg" alt="White Chicken Chili"></food-image>
                     </aside>
 
                     <section id="blogposts" class="col-md-9">
@@ -202,7 +203,11 @@
                             </author-details>
                         </div>
                     `
-                }
+                },
+                'food-image': {
+                    props: ['src', 'alt'],
+                    template: '<img v-bind:src="src" :alt="alt" class="img-fluid">'
+                },
             },
             data: {
                 posts: [
